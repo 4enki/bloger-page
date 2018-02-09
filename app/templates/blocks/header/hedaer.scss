@@ -1,0 +1,138 @@
+.header {
+  background-color: rgb(38, 45, 48);
+  height: 60px;
+  transition: color .25s;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &_wrapper {
+    padding: 0 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+  &_nav {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+
+    .active {
+
+      .header_nav-link {
+
+        span {
+          color: #ffffff;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-link {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: rgb(88, 116, 129);
+      justify-content: center;
+      transition: .3s ease;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      height: 60px;
+      align-items: center;
+      padding: 0 20px;
+
+      span {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        align-items: center;
+        color: #61737f;
+        text-decoration: none;
+        outline: none;
+        transition: color .25s;
+
+        &:after {
+          position: absolute;
+          z-index: 1;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          -ms-flex-preferred-size: 3px; /* sass-lint:disable-line no-vendor-prefixes */
+          flex-basis: 3px;
+          height: 3px;
+          background-color: #fa0;
+          opacity: 0;
+          transition: opacity .25s;
+        }
+      }
+
+      &:hover {
+
+        span {
+          color: #ffffff;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &-menu {
+    margin-left: 20px;
+  }
+}
+
+.channel-passport {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  color: #ffffff;
+  font-family: $GeneralFontFamily;
+
+  &_name {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+
+  &_category {
+    font-size: 11px;
+    line-height: 11px;
+    font-family: $GothamFontFamily;
+
+    span {
+      color: #9ba3a7;
+    }
+  }
+}
+
+.avka-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #f90;
+  margin-right: 10px;
+
+  img {
+    vertical-align: bottom;
+  }
+}
