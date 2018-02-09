@@ -64,6 +64,27 @@
 
 
 .footer-cards {
-  width: 100px;
+  width: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-card {
+  border: 1px solid rgb(53, 62, 66);
+  border-radius: 3px;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-box {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
 }
