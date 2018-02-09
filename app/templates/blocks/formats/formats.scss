@@ -12,6 +12,8 @@
     align-content: stretch;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 1000px;
+    margin: 0 auto;
   }
 }
 
@@ -36,7 +38,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 25px 25px;
   }
 
   &-name {
@@ -44,11 +46,22 @@
     text-align: center;
 
     h3.h3 {
-      margin: 0;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 30px;
+      margin: 0 0 10px 0;
+      color: #262d30;
+      font-family: Arial;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
     }
+  }
+
+  &-info {
+    color: #9ba3a8;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
   }
 
   &-footer {
@@ -62,7 +75,10 @@
 
   &-price {
     text-align: center;
+    color: #262d30;
+    font-family: Arial;
     font-size: 24px;
-    line-height: 24px;
+    font-weight: 400;
+    line-height: 20px;
   }
 }

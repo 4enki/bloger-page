@@ -1,0 +1,57 @@
+.videos {
+  background-color: #f1f6f7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_headline {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &-periods {
+    color: #9ba3a8;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+
+.sort-panel {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.filer-link {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #2e3033;
+  border-bottom: 0;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 12px 18px 12px 18px;
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .filer-counter {
+    color: #ff9a00;
+  }
+
+  &:hover {
+    color: #ff9a00;
+    background-color: #f2f6f8;
+  }
+
+  &.active {
+    background-color: #e9eff0;
+  }
+}
