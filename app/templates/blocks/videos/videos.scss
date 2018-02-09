@@ -48,10 +48,70 @@
 
   &:hover {
     color: #ff9a00;
-    background-color: #f2f6f8;
+    background-color: #e9eff0;
   }
 
   &.active {
     background-color: #e9eff0;
+  }
+}
+
+.videos-list {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.mini-video {
+  flex-basis: 25%;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_preview {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &_name {
+    color: #262d30;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+
+  &_meta {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 4px;
+  }
+}
+
+.date {
+  color: #9ba4a8;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-left: 15px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  color: #9ba4a8;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+
+  &_text {
+    margin-left: 5px;
   }
 }

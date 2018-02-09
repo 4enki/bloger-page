@@ -1,0 +1,14 @@
+.icon {
+  position: relative;
+  display: inline-block;
+  transition: all .3s ease;
+
+  &-eye {
+    @include size(14px, 12px);
+    background-image: svg-load('eye.svg', fill=#e4e8eb);
+
+    &.gray {
+      background-image: svg-load('eye.svg', fill=#587481);
+    }
+  }
+}

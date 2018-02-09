@@ -22,7 +22,7 @@
   flex-basis: 33%;
   margin-right: 20px;
   position: relative;
-  border: 1px solid #e3e8eb;
+  border: 1px solid #c1c7cb;
   transition: all .25s ease;
   border-radius: 3px;
 
@@ -32,6 +32,10 @@
 
   &:hover {
     border-color: #00b000;
+
+    .format-ico {
+      fill: #00b000;
+    }
   }
 
   &-box {
@@ -39,6 +43,21 @@
     display: flex;
     flex-direction: column;
     padding: 25px 25px;
+  }
+
+  &-icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    margin: 0 auto;
+
+    .format-ico {
+      transition: all .25s ease;
+    }
   }
 
   &-name {
