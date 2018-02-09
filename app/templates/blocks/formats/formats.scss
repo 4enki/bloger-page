@@ -1,0 +1,68 @@
+.formats {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_headline {
+    text-align: center;
+  }
+
+  &_list {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.format {
+  flex: 1;
+  flex-basis: 33%;
+  margin-right: 20px;
+  position: relative;
+  border: 1px solid #e3e8eb;
+  transition: all .25s ease;
+  border-radius: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border-color: #00b000;
+  }
+
+  &-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  &-name {
+    margin-bottom: 5px;
+    text-align: center;
+
+    h3.h3 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &-footer {
+    margin-top: auto;
+  }
+
+  &-actions {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &-price {
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

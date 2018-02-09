@@ -12,13 +12,13 @@ button:disabled,
 .btn {
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 13px 26px 12px 26px;
   color: rgb(255, 255, 255);
   font-family: Arial;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 16px;
   white-space: nowrap;
   text-align: center;
   text-decoration: none;
@@ -28,9 +28,186 @@ button:disabled,
   position: relative;
   overflow: hidden;
 
+  &-green {
+    background-color: rgb(48, 175, 11);
+
+    &:hover,
+    &.hover {
+      background-color: rgb(49, 197, 9);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(30, 155, 0);
+      border-color: rgb(30, 155, 0);
+      color: #fff;
+    }
+
+    &[disabled=disabled],
+    &:disabled,
+    &:disabled,
+    &.disabled {
+      color: rgb(255, 255, 255);
+      background-color: rgb(214, 217, 220);
+      border-color: rgb(214, 217, 220);
+    }
+  }
+
+  &-green-site {
+    background-color: #00b000;
+    padding: 11px 24px 10px 24px;
+
+    &:hover,
+    &.hover {
+      background-color: rgb(49, 197, 9);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(30, 155, 0);
+      border-color: rgb(30, 155, 0);
+      color: #fff;
+    }
+
+    &[disabled=disabled],
+    &:disabled,
+    &:disabled,
+    &.disabled {
+      color: rgb(255, 255, 255);
+      background-color: rgb(214, 217, 220);
+      border-color: rgb(214, 217, 220);
+    }
+  }
+
+  &-red {
+    background-color: transparent;
+    border-color: rgb(234, 12, 18);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+
+    &:hover,
+    &.hover {
+      background-color: rgb(234, 12, 18);
+      border-color: rgb(234, 12, 18);
+      color: #fff;
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(185, 10, 14);
+      border-color: rgb(185, 10, 14);
+      color: #fff;
+    }
+
+    &[disabled=disabled],
+    &:disabled,
+    &:disabled,
+    &.disabled {
+      color: rgb(255, 255, 255);
+      background-color: rgb(214, 217, 220);
+      border-color: rgb(214, 217, 220);
+    }
+  }
+
+  &-light {
+    border-color: #ebf1f2;
+    color: #909a9e;
+
+    &:hover,
+    &.hover {
+      border-color: rgb(173, 177, 185);
+      color: rgb(0, 0, 0);
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(247, 247, 248);
+      border-color: rgb(120, 122, 128);
+      color: rgb(0, 0, 0);
+    }
+
+    &[disabled=disabled],
+    &:disabled,
+    &:disabled,
+    &.disabled {
+      color: rgb(173, 177, 185);
+      background-color: rgb(247, 247, 248);
+      border-color: rgb(214, 218, 221);
+    }
+  }
+
+  &-outline {
+    border-color: rgb(173, 177, 185);
+    color: rgb(0, 0, 0);
+
+    &:hover,
+    &.hover {
+      border-color: rgb(120, 122, 128);
+      color: rgb(0, 0, 0);
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(247, 247, 248);
+      border-color: rgb(120, 122, 128);
+      color: rgb(0, 0, 0);
+    }
+
+    &[disabled=disabled],
+    &:disabled,
+    &:disabled,
+    &.disabled {
+      color: rgb(173, 177, 185);
+      background-color: rgb(247, 247, 248);
+      border-color: rgb(214, 218, 221);
+    }
+
+    &.dark {
+      background-color: #262d30;
+      border-color: #2f383e;
+      color: #587481;
+
+      &:hover,
+      &.hover {
+        background-color: rgb(49, 197, 9);
+        border-color: transparent;
+        color: #fff;
+      }
+
+      &:focus,
+      &.focus {
+        background-color: rgb(30, 155, 0);
+        border-color: rgb(30, 155, 0);
+      }
+    }
+  }
+
   &-white {
     background-color: rgb(255, 255, 255);
     color: rgb(38, 45, 48);
+
+    &:hover,
+    &.hover {
+      background-color: rgb(49, 197, 9);
+      border-color: transparent;
+      color: #fff;
+    }
+
+    &:focus,
+    &.focus {
+      background-color: rgb(30, 155, 0);
+      border-color: rgb(30, 155, 0);
+      color: #fff;
+    }
+  }
+
+  &-outline-green {
+    border-color: rgb(49, 197, 9);
+    color: #000;
 
     &:hover,
     &.hover {
@@ -61,8 +238,7 @@ button:disabled,
   }
 
   &-large {
-    padding-left: 60px;
-    padding-right: 60px;
-    min-width: 240px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }

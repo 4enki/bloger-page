@@ -1,0 +1,79 @@
+.statistics {
+  background-color: #f1f6f7;
+  position: relative;
+  border-bottom: 1px solid #f1f6f7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.channel-counters {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.channel-counter {
+  flex-basis: 33%;
+  margin-bottom: 40px;
+  font-family: $GeneralFontFamily;
+
+  &.green {
+
+    .channel-counter_value {
+      color: #00b002;
+    }
+  }
+
+  &_box {
+    text-align: center;
+  }
+
+  &_value {
+    color: #5a6367;
+    font-family: $GothamFontFamily;
+    font-weight: 400;
+    line-height: 35px;
+    font-size: 35px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+  &_text {
+    color: #9ca2a6;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.big-video {
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #f90;
+  border-color: #f90;
+  width: 425px;
+  height: auto;
+
+  &_wrap {
+    margin-right: 15px;
+  }
+
+  &_name {
+    margin-top: 3px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+}
