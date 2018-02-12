@@ -73,6 +73,7 @@ input:placeholder {
     font-size: 24px;
     font-weight: 400;
     line-height: 25px;
+    margin-top: 0;
   }
 }
 
@@ -109,16 +110,16 @@ input:placeholder {
 
   &:focus,
   &.focus {
-    border-color: rgb(200, 200, 200);
+    border-color: rgb(30, 155, 0);
   }
 }
 
 .form-control-label {
   color: rgb(156, 162, 166);
   font-family: Arial;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 16px;
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -311,4 +312,11 @@ input:placeholder {
       }
     }
   }
+}
+
+.label-box {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
 }

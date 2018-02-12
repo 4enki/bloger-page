@@ -189,6 +189,7 @@ button:disabled,
   &-white {
     background-color: rgb(255, 255, 255);
     color: rgb(38, 45, 48);
+    border-color: rgb(173, 177, 185);
 
     &:hover,
     &.hover {
@@ -235,6 +236,7 @@ button:disabled,
 
   &-mini {
     padding: 9px 20px 8px 19px;
+    font-size: 12px;
   }
 
   &-large {
