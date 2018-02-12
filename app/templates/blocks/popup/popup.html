@@ -1,0 +1,56 @@
+<div class="popup mfp-hide" id="popup-go">
+  <div class="popup-body">
+
+    <form action="https://webartex.ru/signup" method="get" autocomplete="off" class="form form-user" onsubmit="ga('send', 'event', 'click', 'regpopup', {'nonInteraction': 1}); ga('send', 'pageview', '/virtual/register-done/');" id="signup-form">
+
+      <div class="form-name">
+        <h3>Регистрация в Webartex</h3>
+      </div><!-- /.form-name -->
+
+      <div class="form-group" name="name">
+        <label for="aname" class="form-control-label hide">Ваше имя</label>
+        <input type="text" id="aname" name="name" class="form-control" placeholder="Представьтесь, пожалуйста?">
+        <div class="invalid-feedback"></div>
+      </div><!-- /.form-group -->
+
+      <div class="form-group" name="email">
+        <label for="aemail" class="form-control-label hide">Рабочий email</label>
+        <input type="text" id="aemail" name="email" class="form-control" placeholder="Адрес почты">
+        <div class="invalid-feedback"></div>
+      </div><!-- /.form-group -->
+
+      <div class="form-group" name="password">
+        <label for="apass" class="form-control-label hide">Придумайте пароль</label>
+        <input type="password" id="apass" name="password" class="form-control" placeholder="Пароль">
+        <div class="invalid-feedback"></div>
+      </div><!-- /.form-group -->
+
+      <div class="form-group" name="code">
+        <label for="apromocode" class="form-control-label hide">Промокод</label>
+        <input type="text" id="apromocode" name="promocode" class="form-control" placeholder="Введите промокод">
+        <div class="invalid-feedback"></div>
+      </div><!-- /.form-group -->
+
+      <div class="form-group" name="offers-agree">
+        <div class="form-check">
+          <input type="checkbox" name="offers-agree" id="iamok" value="1">
+          <label for="iamok">
+            <span class="form-check-control">С <a href="https://webartex.ru/docs/user/offers" target="_blank">Офертами</a> и <a href="https://webartex.ru/docs/privacy" target="_blank">Политикой конфиденциальности</a> ознакомлен и согласен</span>
+          </label>
+        </div><!-- /.form-check -->
+        <div class="invalid-feedback"></div>
+      </div><!-- /.form-group -->
+
+      <div class="form-actions full">
+        <button class="btn btn-green btn-full" id="submit" type="submit" onclick="yaCounter20657662.reachGoal('regBtnOnPopup'); return true; ga('send', 'event', 'click', 'registration', {'nonInteraction': 1});">Зарегистрироваться</button>
+      </div><!-- /.form-actions -->
+
+    </form>
+  </div><!-- /.popup-body -->
+  <div class="popup-footer">
+    <div class="panel__switch">
+      <a class="switch-text" href="https://webartex.ru/login" target="_blank">У вас есть аккаунт?</a>
+      <a href="https://webartex.ru/login" class="btn btn-outline" onclick="yaCounter20657662.reachGoal('btnLoginOnPopup'); return true; ga('send', 'event', 'click', 'login', {'nonInteraction': 1});">Войдите в систему</a>
+    </div><!-- /.panel__switch -->
+  </div><!-- /.popup-footer -->
+</div><!-- /.popup -->
