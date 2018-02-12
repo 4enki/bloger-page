@@ -1,7 +1,7 @@
 // шпионское меню со скроллом
 var lastId,
   topMenu = $("#top-menu"),
-  topMenuHeight = topMenu.outerHeight()+50,
+  topMenuHeight = topMenu.outerHeight()+0,
   menuItems = topMenu.find("a"),
   scrollItems = menuItems.map(function(){
     var item = $($(this).attr("href"));
