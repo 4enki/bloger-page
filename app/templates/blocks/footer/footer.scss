@@ -64,14 +64,16 @@
 
 
 .footer-cards {
-  width: 900px;
+  width: 960px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  align-content: center;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .footer-card {
+  font-family: $GeneralFontFamily;
+  flex: 1 33%;
   border: 1px solid rgb(53, 62, 66);
   border-radius: 3px;
   margin-right: 20px;
@@ -86,5 +88,41 @@
     align-content: center;
     flex-direction: column;
     padding: 20px 20px;
+    height: 100%;
+  }
+
+  &_content {
+    color: #61737f;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.52);
+
+      &:hover {
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+
+  &_header {
+    margin-top: auto;
+
+    .h3 {
+      margin: 0 0 10px 0;
+      color: #fff;
+      font-family: Arial;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  &_footer {
+    padding-top: 20px;
+    margin-top: auto;
   }
 }
