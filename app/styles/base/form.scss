@@ -114,6 +114,12 @@ input:placeholder {
   }
 }
 
+textarea.form-control {
+  min-height: 80px;
+  max-height: 300px;
+  resize: vertical;
+}
+
 .form-control-label {
   color: rgb(156, 162, 166);
   font-family: Arial;

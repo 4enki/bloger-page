@@ -9,6 +9,15 @@
   margin: 40px auto;
   position: relative;
 
+  &.idea {
+    max-width: 600px;
+    margin: 25px auto;
+
+    .form-user {
+      width: 500px;
+    }
+  }
+
   &-body {
     padding-top: 40px;
     padding-bottom: 20px;
