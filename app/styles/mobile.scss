@@ -100,16 +100,16 @@
   }
 
   .container-fluid {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   // описание канала
   .description {
 
     &_wrap {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       padding-top: 15px;
       padding-bottom: 15px;
 
@@ -134,8 +134,8 @@
 
   // статистика по каналу
   .statistics {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
 
@@ -178,6 +178,139 @@
       &_text {
         font-size: 15px;
         line-height: 15px;
+      }
+    }
+  }
+
+  // форматы и стоимость
+  .formats {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &_headline {
+      padding-bottom: 10px;
+
+      .h2 {
+        font-size: 18px;
+        line-height: 24px;
+        padding-bottom: 5px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_list {
+      padding-top: 5px;
+      padding-bottom: 10px;
+      width: 100%;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .format {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  // подвал
+  .videos {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &_headline {
+      flex-direction: column;
+      margin-bottom: 5px;
+      align-items: flex-start;
+    }
+
+    &-periods {
+      display: block;
+      visibility: hidden;
+    }
+
+    .videos-list {
+      flex-direction: column;
+      padding-top: 5px;
+    }
+
+    .mini-video {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  // подвал
+  .footer {
+    height: auto;
+
+    &_company {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &-box {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    &_public {
+
+      .social-box {
+        left: 0;
+
+        .social_item {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    &_copy {
+      height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 1px;
+
+      &-box {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copy-text {
+        padding-bottom: 10px;
+      }
+    }
+
+    .payment-options {
+
+      &_item {
+        margin-right: 15px;
+      }
+    }
+
+    .footer-cards {
+      width: 100%;
+      padding-bottom: 0;
+      flex-direction: column;
+    }
+
+    .footer-card {
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
