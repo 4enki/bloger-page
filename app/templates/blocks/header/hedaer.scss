@@ -98,6 +98,10 @@
   &-menu {
     margin-left: 20px;
   }
+
+  &_aside {
+    margin-left: auto;
+  }
 }
 
 .channel-passport {
@@ -136,5 +140,38 @@
 
   img {
     vertical-align: bottom;
+  }
+}
+
+.header_nav--hamburger {
+  display: none;
+  visibility: hidden;
+}
+
+.hamburger {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  flex-direction: column;
+  transition: .3s ease;
+  position: relative;
+  justify-content: space-between;
+
+  &-wrap {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    transition: all .3s ease;
+  }
+
+  &_l {
+    background-color: rgb(88, 116, 129);
+    height: 2px;
+    width: 100%;
+    transition: all .3s linear;
+    position: relative;
   }
 }

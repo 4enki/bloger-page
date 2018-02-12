@@ -31,3 +31,12 @@ $(window).scroll(function(){
   }
 });
 // /шпионское меню со скроллом
+
+(function(){
+
+  $('._nav-hamburger').click(function(e) {
+    e.preventDefault();
+    $(this).closest('header').toggleClass('open');
+  });
+
+})();

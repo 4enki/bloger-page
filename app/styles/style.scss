@@ -6,3 +6,5 @@
 @import "base/*.scss";
 
 @import "../templates/blocks/**/*.scss"; // Модули и блоки
+
+@import "mobile.scss"; // Стили для мобильных устройств и адаптива
