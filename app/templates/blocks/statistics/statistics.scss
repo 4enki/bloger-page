@@ -61,8 +61,8 @@
 .big-video {
   overflow: hidden;
   border-radius: 3px;
-  background-color: #f90;
-  border-color: #f90;
+  background-color: #e4e8eb;
+  border-color: #e4e8eb;
   width: 425px;
   height: auto;
 
@@ -72,8 +72,9 @@
 
   &_name {
     margin-top: 3px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    font-family: $GeneralFontFamily;
+    line-height: 22px;
     font-weight: bold;
   }
 }
