@@ -1,0 +1,110 @@
+.likely {
+  flex-wrap: wrap;
+  position: relative;
+  bottom: auto;
+  min-height: 24px;
+  width: auto;
+  height: auto;
+  padding: 0;
+  z-index: auto;
+  display: inline-flex;
+  font-size: 12px;
+
+  .likely__icon {
+    width: 22px;
+    height: auto;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    fill: #fff;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .likely__button {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 6px;
+  }
+
+  .likely__counter {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 6px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, .5);
+  }
+
+  .likely__widget {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    min-width: 20px;
+    width: auto;
+    height: 20px;
+    margin: 2px 4px 2px 0;
+    line-height: 20px;
+    font-weight: normal;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: $GeneralFontFamily;
+    color: #fff;
+    fill: #fff;
+    user-select: none;
+    overflow: hidden;
+    transition-duration: .08s;
+    transition-timing-function: ease-in-out;
+    transition-property: background;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.likely__widget_vkontakte {
+      background-color: #526e8f;
+
+      &:hover {background: #3a5678;}
+    }
+
+    &.likely__widget_facebook {
+      background: #3b5998;
+
+      &:hover {background: #324b81;}
+    }
+
+    &.likely__widget_twitter {
+      background: #55acee;
+
+      &:hover {background: #4892ca;}
+    }
+
+    &.likely__widget_gplus {
+      background: #dc4e41;
+
+      &:hover {background: #bb4237;}
+    }
+
+    &.likely__widget_odnoklassniki {
+      background: #ed812b;
+
+      &:hover {background: #c96d24;}
+    }
+
+    &.likely__widget_whatsapp {
+      background-color: #25d366;
+
+      &:hover {background: #38b747;}
+    }
+
+    &.likely__widget_telegram {
+      background-color: #0088cc;
+
+      &:hover {background: #0073ad;}
+    }
+  }
+}
