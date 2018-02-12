@@ -26,8 +26,8 @@ $(window).scroll(function(){
   if (lastId !== id) {
     lastId = id;
     menuItems
-      .parent().removeClass("active")
-      .end().filter("[href=#"+id+"]").parent().addClass("active");
+      .parent(".header_nav_item").removeClass("active")
+      .end().filter('[href="#'+id+'"]').parent(".header_nav_item").addClass("active");
   }
 });
 // /шпионское меню со скроллом
