@@ -104,6 +104,7 @@
     padding-right: 10px;
   }
 
+  // описание канала
   .description {
 
     &_wrap {
@@ -128,6 +129,56 @@
 
     &_header {
       flex-basis: 100%;
+    }
+  }
+
+  // статистика по каналу
+  .statistics {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &_wrap {
+      flex-direction: column;
+    }
+
+    .big-video {
+      width: 100%;
+
+      &_wrap {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    .channel-counters {
+      padding-top: 10px;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    .channel-counter {
+      background-color: #fff;
+      border-radius: 3px;
+      padding: 10px;
+      flex-basis: 40%;
+      margin-bottom: 20px;
+      margin-right: 5px;
+
+      &_value {
+        line-height: 25px;
+        font-size: 25px;
+
+        span {
+          font-size: 15px;
+        }
+      }
+
+      &_text {
+        font-size: 15px;
+        line-height: 15px;
+      }
     }
   }
 }
