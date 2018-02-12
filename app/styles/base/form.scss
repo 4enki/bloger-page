@@ -24,61 +24,75 @@ input:placeholder {
   text-overflow: ellipsis;
 }
 
-.form-inline {
-  display: flex;
-  align-items: center;
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
 
-  @media #{$sm} {
-    flex-direction: column;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.status-right {
+    position: relative;
+
+    .form-control-feedback {
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+    }
+
+    .form-control {
+      padding-right: 40px;
+    }
+  }
+
+  &.is-error {
+
+    .form-control {
+      border-color: #dc3545;
+    }
+
+    .invalid-feedback {
+      display: block;
+    }
+
+    .form-check .form-check-control  {
+      &:before {
+        border-color: #dc3545;
+      }
+    }
   }
 }
 
-.form-group {
-  margin-right: 40px;
-  position: relative;
+.form-name {
+  margin-bottom: 30px;
 
-  @media #{$sm} {
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  &--error {
-    position: relative;
-
-    .form-control {
-      border-color: rgba(248, 96, 101, .85);
-      color: rgb(255, 255, 255);
-
-      &:focus {
-        border-color: rgba(248, 96, 101, .85);
-      }
-    }
-
-    .bubble {
-      display: block;
-    }
+  h3 {
+    color: rgb(38, 45, 48);
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
   }
 }
 
 .form-control {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, .5);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(228, 232, 235);
   border-radius: 2px;
   background-image: none;
   height: 40px;
   display: block;
   width: 100%;
-  min-width: 240px;
-  color: rgb(255, 255, 255);
+  color: rgb(38, 45, 48);
   font-family: Arial;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 40px;
   padding: 9px 14px 9px 18px;
   -webkit-padding-start: 18px; /* sass-lint:disable-line no-vendor-prefixes */
   box-sizing: border-box;
   vertical-align: middle;
-  transition: all .2s ease;
   //transition: border-color ease-in-out .15s;
 
   &:disabled,
@@ -90,14 +104,13 @@ input:placeholder {
   }
 
   &:hover {
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(193, 199, 203);
   }
 
   &:focus,
   &.focus {
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(200, 200, 200);
   }
-
 }
 
 .form-control-label {
@@ -106,30 +119,196 @@ input:placeholder {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
+  display: inline-block;
 }
 
-
-.bubble {
-  position: absolute;
-  background-color: rgba(248, 96, 101, 1);
-  border: 1px solid rgba(248, 96, 101, .85);
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  min-width: 220px;
-  left: 0;
-  bottom: -22px;
-  z-index: 100;
-  transform: none;
+.invalid-feedback {
   display: none;
-  transition: all .2s ease;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1;
+  color: #dc3545;
+}
 
-  &__text {
-    color: #fff;
+.form-actions {
+  margin-top: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  &.full {
+
+    .btn {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .btn {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .restore-link {
+    color: rgb(38, 45, 48);
+  }
+}
+
+.form-social {
+  margin-top: 35px;
+  border-top: 1px solid rgb(228, 232, 235);
+  padding-top: 20px;
+
+  &-text {
+    color: rgb(156, 162, 166);
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  cursor: pointer;
+
+  &.form-check--bg {
+
+    input[type="checkbox"]:checked + label .form-check-control:after {
+      color: #62afff;
+      background-image: svg-load('check-small.svg', fill=#ffffff);
+    }
+
+    input[type="checkbox"]:checked + label .form-check-control:before {
+      border: 1px solid #21aa00;
+      background-color: #21aa00;
+    }
+
+    input[type="checkbox"]:checked + label .form-check-control:hover:before {
+      background-color: #f7f7f8;
+    }
+  }
+
+  label {
+    min-height: 20px;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgb(156, 162, 166);
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    position: absolute;
+    margin-top: 4px\9;
+    margin-left: -20px;
+  }
+
+  label {
+    position: relative;
+  }
+
+  span,
+  div {
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      margin: auto;
+    }
+  }
+
+  input {
+
+    &[type="radio"],
+    &[type="checkbox"] {
+      display: none;
+    }
+  }
+
+  .form-check-control {
+    color: rgb(156, 162, 166);
     font-family: Arial;
     font-size: 12px;
+    line-height: 18px;
     font-weight: 400;
-    line-height: 12px;
-    padding: 4px 8px 5px 8px;
+
+    &:before {
+      @include size(20px);
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(228, 232, 235);
+      border-radius: 3px;
+      left: -30px;
+      box-sizing: border-box;
+      transition: all .2s ease;
+    }
+
+    &:hover {
+
+      &:after {
+        background-image: svg-load('check-small.svg', fill=rgb(193, 199, 203));
+      }
+
+      &:before {
+        border: 1px solid rgb(193, 199, 203);
+      }
+    }
+
+    &:after {
+      @include size(14px, 11px);
+      background-image: svg-load('check-small.svg', fill=rgb(255, 255, 255));
+      background-position: 50% 50%;
+      text-indent: -9999px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      overflow: hidden;
+      left: -27px;
+      top: 3px;
+      color: transparent;
+      transition: all .2s ease;
+    }
+  }
+
+  input[type="checkbox"]:checked + label .form-check-control:after {
+    background-image: svg-load('check-small.svg', fill=rgb(48, 175, 11));
+  }
+
+  input[type="checkbox"]:checked + label .form-check-control:before {
+    border: 1px solid rgb(228, 232, 235);
+  }
+
+  input[type="checkbox"]:checked + label .form-check-control:hover:before {
+    border: 1px solid rgb(193, 199, 203);
+  }
+
+  input[type="checkbox"]:disabled {
+
+    & + label .form-check-control {
+      color: #adb1b9;
+      cursor: not-allowed;
+
+      &:before {
+        border: 1px solid #d6dadd;
+        background-color: #f7f7f8;
+      }
+    }
+
+    &:checked {
+
+      & + label .form-check-control:after {
+        background-image: svg-load('check-small.svg', fill=#adb1b9);
+      }
+    }
   }
 }
