@@ -20,6 +20,24 @@
         </ul>
       </div><!-- /.header-menu -->
       <div class="header_aside emerge" data-effect="slide" data-down="20px">
+        % if (user && user->isa('App::Model::User')) {
+        <div class="header-nav__section">
+          <div class="header-nav__section_text">
+            <%= user->name || user->email %>
+            <span class="header-nav__avatar" style="background-image: url(%= gravatar_image s => 40, only_url => 1)"></span>
+          </div>
+        </div>
+        <a href="<%= url_for 'tickets' %>" class="header-nav__section <%== (location =~ m/^tickets/) ? 'header-nav__section_active' : ''; %>">
+            <span class="header-nav__section_text">
+              <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18"><path fill="currentColor" fill-rule="evenodd" d="M2 0h20c1.1 0 2 .901 2 2v14c0 1.099-.901 2-2 2H2c-1.099 0-2-.9-2-2V2C0 .899.9 0 2 0zm10 10.586L20.586 2H3.414L12 10.586zM2 3.414v11.173L7.586 9 2 3.414zm1.414 12.587h17.172L15 10.414l-2.293 2.293a.999.999 0 0 1-1.414 0L9 10.414l-5.586 5.587zM22 14.587V3.414L16.414 9 22 14.587z"></path></svg>
+            </span>
+        </a>
+        <div class="header-nav__section">
+            <span class="header-nav__section_text header-nav__section_amount">
+              <%== money user->money, 'int' => 1, 'floor' => 1 %>
+            </span>
+        </div>
+        % }
         <div class="header_nav--hamburger">
           <div class="hamburger-wrap _nav-hamburger">
             <div class="hamburger">
