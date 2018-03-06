@@ -58,8 +58,8 @@
 
 .videos-list {
   display: flex;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .mini-video {

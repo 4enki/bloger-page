@@ -1,4 +1,4 @@
-Highcharts.theme = {
+/*Highcharts.theme = {
 
   lang: {
     loading: 'Загрузка...',
@@ -134,3 +134,4 @@ Highcharts.chart('graph-effective', {
     ]
   }]
 });
+*/
