@@ -1,7 +1,7 @@
 <div class="popup mfp-hide" id="popup-go">
   <div class="popup-body">
 
-    <form action="https://webartex.ru/signup" method="get" autocomplete="off" class="form form-user" onsubmit="ga('send', 'event', 'click', 'regpopup', {'nonInteraction': 1}); ga('send', 'pageview', '/virtual/register-done/');" id="signup-form">
+    <form action="https://webartex.ru/signup" method="get" autocomplete="off" class="form form-user" id="signup-form">
 
       <div class="form-name">
         <h3>Регистрация в Webartex</h3>
@@ -45,7 +45,7 @@
       </div><!-- /.form-group -->
 
       <div class="form-actions full">
-        <button class="btn btn-green btn-full" id="submit" type="submit" onclick="yaCounter20657662.reachGoal('regBtnOnPopup'); return true; ga('send', 'event', 'click', 'registration', {'nonInteraction': 1});">Зарегистрироваться</button>
+        <button class="btn btn-green btn-full" id="submit" type="submit">Зарегистрироваться</button>
       </div><!-- /.form-actions -->
 
     </form>
@@ -53,7 +53,7 @@
   <div class="popup-footer">
     <div class="panel__switch">
       <a class="switch-text" href="https://webartex.ru/login" target="_blank">У вас есть аккаунт?</a>
-      <a href="https://webartex.ru/login" class="btn btn-white btn-mini" onclick="yaCounter20657662.reachGoal('btnLoginOnPopup'); return true; ga('send', 'event', 'click', 'login', {'nonInteraction': 1});">Войдите в систему</a>
+      <a href="https://webartex.ru/login" class="btn btn-white btn-mini">Войдите в систему</a>
     </div><!-- /.panel__switch -->
   </div><!-- /.popup-footer -->
 </div><!-- /.popup -->
@@ -68,8 +68,8 @@
       </div><!-- /.form-name -->
 
       <div class="form-group" name="name">
-        <label for="aname" class="form-control-label hide">Опишите задние для блогера</label>
-        <textarea name="" id="commentnew" cols="30" rows="5" class="form-control" placeholder="Расскажите, что нужно сделать, как и когда"></textarea>
+        <label for="ideacommentnew" class="form-control-label hide">Опишите задние для блогера</label>
+        <textarea name="" id="ideacommentnew" cols="30" rows="5" class="form-control" placeholder="Расскажите, что нужно сделать, как и когда"></textarea>
         <div class="invalid-feedback"></div>
       </div><!-- /.form-group -->
 
@@ -80,15 +80,15 @@
       </div><!-- /.form-group -->
 
       <div class="form-group" name="email">
-        <label for="aemail" class="form-control-label hide">Рабочий email или телефонный номер</label>
-        <input type="text" id="aemail" name="email" class="form-control" placeholder="Адрес почты или номер телефона">
+        <label for="ideaaemail" class="form-control-label hide">Рабочий email или телефонный номер</label>
+        <input type="text" id="ideaaemail" name="email" class="form-control" placeholder="Адрес почты или номер телефона">
         <div class="invalid-feedback"></div>
       </div><!-- /.form-group -->
 
       <div class="form-group" name="offers-agree">
         <div class="form-check">
-          <input type="checkbox" name="offers-agree" id="iamok" value="1">
-          <label for="iamok">
+          <input type="checkbox" name="offers-agree" id="ideaiamok" value="1">
+          <label for="ideaiamok">
             <span class="form-check-control">С <a href="https://webartex.ru/docs/user/offers" target="_blank">Офертами</a> и <a href="https://webartex.ru/docs/privacy" target="_blank">Политикой конфиденциальности</a> ознакомлен и согласен</span>
           </label>
         </div><!-- /.form-check -->
@@ -96,15 +96,9 @@
       </div><!-- /.form-group -->
 
       <div class="form-actions full">
-        <button class="btn btn-green btn-full" id="submit" type="submit" onclick="yaCounter20657662.reachGoal('regBtnOnPopup'); return true; ga('send', 'event', 'click', 'registration', {'nonInteraction': 1});">Отправить сообщение блогеру</button>
+        <button class="btn btn-green btn-full" id="ideasubmit" type="submit">Отправить сообщение блогеру</button>
       </div><!-- /.form-actions -->
 
     </form>
   </div><!-- /.popup-body -->
-  <div class="popup-footer">
-    <div class="panel__switch">
-      <a class="switch-text" href="https://webartex.ru/login" target="_blank">У вас есть аккаунт?</a>
-      <a href="https://webartex.ru/login" class="btn btn-white btn-mini" onclick="yaCounter20657662.reachGoal('btnLoginOnPopup'); return true; ga('send', 'event', 'click', 'login', {'nonInteraction': 1});">Войдите в систему</a>
-    </div><!-- /.panel__switch -->
-  </div><!-- /.popup-footer -->
 </div><!-- /.popup -->
