@@ -4,12 +4,12 @@ $('.youtube-link').magnificPopup({
 });
 
 $(document).ready(function() {
-  $(".work-types a.work-type").click(function(event) {
+  $(".sort-panel a.filer-link").click(function(event) {
     event.preventDefault();
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
     var tab = $(this).attr("href");
-    $(".works-example").not(tab).css("display", "none");
+    $(".videos-list").not(tab).css("display", "none");
     $(tab).fadeIn();
   });
 });
