@@ -28,7 +28,7 @@
 
   &--big {
     z-index: 1;
-    transform: scale(1.16);
+    transform: scale(1.2);
     background-color: #ffffff;
     box-shadow: 0 0 30px -4px #ddd;
     border-color: #00b000;
@@ -101,7 +101,7 @@
     h3.h3 {
       margin: 0 0 10px 0;
       color: #262d30;
-      font-family: Arial;
+      font-family: $RobotoontFamily;
       font-size: 18px;
       font-weight: 400;
       line-height: 20px;
@@ -110,7 +110,7 @@
 
   &-info {
     color: #9ba3a8;
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -129,7 +129,7 @@
   &-price {
     text-align: center;
     color: #262d30;
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 24px;
     font-weight: 400;
     line-height: 20px;

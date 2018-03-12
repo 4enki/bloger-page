@@ -13,7 +13,7 @@
 
   &-periods {
     color: #9ba3a8;
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
@@ -27,7 +27,7 @@
 }
 
 .filer-link {
-  font-family: Arial;
+  font-family: $RobotoontFamily;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -120,7 +120,7 @@
 
   &_name {
     color: #262d30;
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -128,10 +128,10 @@
 
     .h4 {
       color: #262d30;
-      font-family: Arial;
+      font-family: $RobotoontFamily;
       font-size: 14px;
       font-weight: 400;
-      line-height: 22px;
+      line-height: 20px;
       margin: 0;
       display: inline;
       border-bottom: 1px solid transparent;
@@ -161,7 +161,7 @@
   align-items: center;
   align-content: center;
   color: #9ba4a8;
-  font-family: Arial;
+  font-family: $RobotoontFamily;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;

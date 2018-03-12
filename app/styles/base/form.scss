@@ -86,7 +86,7 @@ input:placeholder {
   display: block;
   width: 100%;
   color: rgb(38, 45, 48);
-  font-family: Arial;
+  font-family: $RobotoontFamily;
   font-size: 14px;
   font-weight: 400;
   line-height: 40px;
@@ -122,7 +122,7 @@ textarea.form-control {
 
 .form-control-label {
   color: rgb(156, 162, 166);
-  font-family: Arial;
+  font-family: $RobotoontFamily;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -170,7 +170,7 @@ textarea.form-control {
 
   &-text {
     color: rgb(156, 162, 166);
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -246,7 +246,7 @@ textarea.form-control {
 
   .form-check-control {
     color: rgb(156, 162, 166);
-    font-family: Arial;
+    font-family: $RobotoontFamily;
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
