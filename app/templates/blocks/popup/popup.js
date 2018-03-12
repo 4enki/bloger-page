@@ -59,4 +59,26 @@ $(document).ready(function() {
     return false;
   });
 
+  $('#ideaaemail').keyup(function(){
+    if ($(this).val().length !=0)
+      $('#ideasubmit').attr('disabled', false);
+    else
+      $('#ideasubmit').attr('disabled',true);
+  });
+
+  $('#idea-form').on('submit', function(event) {
+    event.preventDefault();
+    var $form = $(this);
+
+    if ($('#ideacommentnew').val().length !=0) {
+      console.log('dfgdfg');
+      var $fld = $form.find(".form-group[name=" + i + "]");
+      $fld.addClass('is-error');
+    }
+
+
+
+
+  });
+
 });
