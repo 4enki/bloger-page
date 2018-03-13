@@ -20,16 +20,17 @@ $(document).ready(function() {
     $(this).removeClass('is-error');
   });
 
-  $("#signup-form").on('submit', function() {
+  /*$("#signup-form").on('submit', function() {
     var $form = $(this);
+    console.log($form.attr('action'));
 
     $.ajax({
-      type: 'GET',
+      type: 'POST',
       dataType: 'json',
       async: true,
       url: $form.attr('action') + '.json?adv=ayhgggon&utm_source=landing&utm_campaign=youtube_start&utm_medium=youtube_landing&utm_content=signup',
       data: $form.serialize(),
-      success: function(res) {
+      success: function success(res) {
         switch (res.status) {
           case 'error':
             var errors = res.errors;
@@ -43,7 +44,7 @@ $(document).ready(function() {
             }
 
           case 'redirect':
-            if (res.redirect_to){
+            if (res.redirect_to) {
               var page = res.redirect_to;
               if (!page) page = "/";
               window.location = page;
@@ -53,11 +54,11 @@ $(document).ready(function() {
         }
       },
 
-      error: function() {}
+      error: function error() {}
     });
 
     return false;
-  });
+  });*/
 
   // $('#ideaaemail').keyup(function(){
   //   if ($(this).val().length !=0)
