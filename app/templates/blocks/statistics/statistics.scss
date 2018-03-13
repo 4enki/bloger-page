@@ -25,7 +25,7 @@
 
 .channel-counter {
   flex-basis: 33%;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-family: $RobotoontFamily;
 
   &.green {
@@ -43,8 +43,8 @@
     color: #5a6367;
     font-family: $RobotoontFamily;
     font-weight: 100;
-    line-height: 30px;
-    font-size: 30px;
+    line-height: 28px;
+    font-size: 28px;
 
     span {
       font-size: 20px;
@@ -54,10 +54,10 @@
   &_text {
     color: #9ca2a6;
     font-family: $RobotoontFamily;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
-    line-height: 20px;
-    margin-bottom: 10px;
+    line-height: 15px;
+    margin-bottom: 6px;
   }
 }
 
