@@ -119,6 +119,9 @@
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    align-content: center;
   }
 
   &_category {
@@ -130,6 +133,10 @@
     span {
       color: #9ba3a7;
     }
+  }
+
+  &_check {
+    padding-left: 5px;
   }
 }
 

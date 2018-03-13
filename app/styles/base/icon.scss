@@ -16,4 +16,9 @@
     @include size(20px);
     background-image: svg-load('play-in-circle.svg', fill=#ffffff);
   }
+
+  &-verified {
+    @include size(20px);
+    background-image: svg-load('verified-icon.svg', fill=#30AF0B);
+  }
 }
