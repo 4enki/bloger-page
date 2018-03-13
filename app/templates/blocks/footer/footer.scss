@@ -86,8 +86,14 @@
   margin-right: 20px;
 
   &--confirm {
-    background-color: #00b002;
+    background-color: #313436;
+    border-color: #313436;
     color: #fff;
+
+    .icon-verified {
+      top: 3px;
+      margin-left: 2px;
+    }
   }
 
   &:last-child {

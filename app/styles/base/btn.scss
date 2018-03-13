@@ -184,6 +184,23 @@ button:disabled,
         border-color: rgb(30, 155, 0);
       }
     }
+
+    &.orange {
+      border-color: #ff9900;
+      color: #ff9900;
+
+      &:hover {
+        background-color: #f90;
+        color: #fff;
+      }
+
+      &:focus,
+      &.focus {
+        background-color: #ce7d00;
+        border-color: #ce7d00;
+        color: #ffffff;
+      }
+    }
   }
 
   &-white {
