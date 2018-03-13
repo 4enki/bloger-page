@@ -199,3 +199,39 @@
     }
   }
 }
+
+.edit-video-list {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  width: 960px;
+  margin: 5px auto 5px auto;
+
+  &_content {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  &_form {
+    flex: 1 100%;
+
+    .form-group {
+      align-items: center;
+      align-content: center;
+    }
+
+    .form-control-label {
+      font-size: 13px;
+    }
+  }
+
+  &_help {
+    min-width: 280px;
+    flex-basis: 280px;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #788185;
+  }
+}
