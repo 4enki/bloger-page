@@ -59,26 +59,49 @@ $(document).ready(function() {
     return false;
   });
 
-  $('#ideaaemail').keyup(function(){
-    if ($(this).val().length !=0)
-      $('#ideasubmit').attr('disabled', false);
-    else
-      $('#ideasubmit').attr('disabled',true);
-  });
+  // $('#ideaaemail').keyup(function(){
+  //   if ($(this).val().length !=0)
+  //     $('#ideasubmit').attr('disabled', false);
+  //   else
+  //     $('#ideasubmit').attr('disabled',true);
+  // });
+  //
+  // $('#idea-form').on('submit', function(event) {
+  //   event.preventDefault();
+  //   var $form = $(this);
+  //
+  //   if ($('#ideacommentnew').val().length !=0) {
+  //     console.log('dfgdfg');
+  //     var $fld = $form.find(".form-group[name=" + i + "]");
+  //     $fld.addClass('is-error');
+  //   }
+  //
+  //
+  //
+  //
+  // });
 
-  $('#idea-form').on('submit', function(event) {
-    event.preventDefault();
-    var $form = $(this);
-
-    if ($('#ideacommentnew').val().length !=0) {
-      console.log('dfgdfg');
-      var $fld = $form.find(".form-group[name=" + i + "]");
-      $fld.addClass('is-error');
-    }
-
-
-
-
+  $(function() {
+    //при нажатии на кнопку с id="save"
+    $('#idea-form').on('submit', function(event) {
+      event.preventDefault();
+      //переменная formValid
+      var formValid = true;
+      //перебрать все элементы управления input
+      $('.form-control').each(function() {
+        //найти предков, которые имеют класс .form-group, для установления success/error
+        var formGroup = $(this).parents('.form-group');
+        //для валидации данных используем HTML5 функцию checkValidity
+        if ($(this).val().length == 0) {
+          formGroup.addClass('is-error');
+        } else {
+          //добавить к formGroup класс .has-error, удалить .has-success
+          formGroup.addClass('has-error').removeClass('has-success');
+          //отметить форму как невалидную
+          formValid = false;
+        }
+      });
+    });
   });
 
 });
