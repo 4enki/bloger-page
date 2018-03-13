@@ -85,6 +85,11 @@
   border-radius: 3px;
   margin-right: 20px;
 
+  &--confirm {
+    background-color: #00b002;
+    color: #fff;
+  }
+
   &:last-child {
     margin-right: 0;
   }
