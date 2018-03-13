@@ -9,7 +9,7 @@ $(document).ready(function() {
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
     var tab = $(this).attr("href");
-    $(".videos-list").not(tab).css("display", "none");
+    $(".videos-type").not(tab).css("display", "none");
     $(tab).fadeIn();
   });
 });

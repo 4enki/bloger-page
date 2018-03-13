@@ -62,6 +62,14 @@
   align-content: flex-start;
 }
 
+.videos-type {
+  display: none;
+}
+
+.videos-type#popular {
+  display: block;
+}
+
 .mini-video {
   flex-basis: 25%;
   margin-right: 15px;
