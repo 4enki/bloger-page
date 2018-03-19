@@ -26,4 +26,10 @@
     @include size(12px, 8px);
     background-image: svg-load('check.svg', fill=#30af0b);
   }
+
+  &-add {
+    @include size(18px);
+    background-image: svg-load('add.svg', fill=#c1c7cb);
+    top: 5px;
+  }
 }
