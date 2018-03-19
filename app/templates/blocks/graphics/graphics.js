@@ -25,8 +25,7 @@ Highcharts.theme = {
     panning: true,
     panKey: 'shift',
     followPointer: false,
-    marker: false,
-    marginTop: 60
+    marker: false
   },
 
   exporting: {
@@ -43,13 +42,19 @@ Highcharts.theme = {
   plotOptions: {
     series: {
       marker: {
-        enabled: false
+        enabled: false,
+        fillColor: '#2da4cf',
+        radius: 1,
+        lineWidth: 1,
+        width: 1,
+        height: 1,
+        lineColor: null // inherit from series
       }
     }
   },
 
   xAxis: {
-    // type: 'datetime',
+    type: 'datetime',
     title: {
       text: ''
     },
@@ -58,6 +63,7 @@ Highcharts.theme = {
       color: '#e1e1e1'
     }
   },
+
   yAxis: {
     gridLineColor: '#f7f7f7',
     title: {
@@ -70,20 +76,12 @@ Highcharts.theme = {
   },
 
   legend: {
-    align: 'left',
-    symbolHeight: 0,
-    symbolWidth: 0,
-    symbolRadius: 50,
-    verticalAlign: 'top',
-    symbolPadding: 10,
-    useHTML:true,
-    x: 22,
-    y: -15
+    enabled: false
   },
 
   tooltip: {
     headerFormat: '',
-    pointFormat: '<span style="background-color:{point.color};display:inline-block;width:8px;height:8px;border-radius:50%;position: relative;top:4px;margin-right:5px;">&nbsp;</span>{series.name}: <span style="color: rgb(44, 49, 51);font-family: Arial;font-size: 14px;font-weight: 400;">{point.y}</span><br>',
+    pointFormat: '<span style="color: #fff;font-family:\'Arial\';font-size:18px;font-weight:400;line-height:18px;">{point.y}</span><br>',
     backgroundColor: null,
     borderWidth: 0,
     shared: true,
@@ -111,7 +109,6 @@ Highcharts.chart('graph-effective', {
   },
 
   series: [{
-    name: 'Эффективность в Яндекс',
     total: '27 %',
     data: [
       [Date.UTC(2017,0,16),1405],
@@ -138,7 +135,7 @@ Highcharts.chart('graph-effective', {
 // Эффективность работы
 Highcharts.chart('graph-effectivefff', {
   chart: {
-    type: 'area'
+    type: 'line'
   },
 
   xAxis: {
@@ -149,7 +146,6 @@ Highcharts.chart('graph-effectivefff', {
   },
 
   series: [{
-    name: 'Эффективность в Яндекс',
     total: '27 %',
     data: [
       [Date.UTC(2017,0,16),1405],
