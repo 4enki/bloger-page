@@ -52,3 +52,135 @@
     display: none;
   }
 }
+
+.audience {
+
+  &_header {
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    .h3 {
+      color: #262d30;
+      font-family: Arial;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      margin: 0;
+    }
+
+    &_woman {
+      flex-basis: 100%;
+      text-align: right;
+      display: flex;
+      align-items: flex-end;
+      align-content: flex-end;
+      justify-content: flex-end;
+    }
+
+    &_devider {
+      flex-basis: 120px;
+      min-width: 120px;
+    }
+
+    &_man {
+      flex-basis: 100%;
+      display: flex;
+      align-items: center;
+      align-content: center;
+    }
+
+    .audience_percent {
+      flex-basis: 60px;
+    }
+  }
+
+  &_tree {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    &_woman {
+      flex-basis: 100%;
+      text-align: right;
+
+      .audience_item {
+        position: relative;
+      }
+
+      .audience_bar {
+        position: relative;
+      }
+
+      .audience_bar-line {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &_age {
+      flex-basis: 120px;
+      min-width: 120px;
+    }
+
+    &_man {
+      flex-basis: 100%;
+      text-align: left;
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  &_bar {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+
+    &-line {
+      position: relative;
+      height: 2px;
+      background-color: #0090c5;
+      text-indent: -99999px;
+    }
+  }
+
+  &_percent {
+    color: #262d30;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    flex-basis: 65px;
+  }
+
+  &_age {
+    text-align: center;
+    color: #c6ced2;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+
+    &_item {
+      margin-bottom: 5px;
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+}
+
