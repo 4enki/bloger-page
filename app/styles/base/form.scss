@@ -163,6 +163,26 @@ textarea.form-control {
   }
 }
 
+.form-actions-info {
+  font-family: $RobotoontFamily;
+  margin-left: 20px;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 14px;
+
+  .icon {
+    margin-left: 2px;
+  }
+
+  &.succes {
+    color: #29b357;
+  }
+
+  &.error {
+    color: #fb4a46;
+  }
+}
+
 .form-social {
   margin-top: 35px;
   border-top: 1px solid rgb(228, 232, 235);
