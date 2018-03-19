@@ -96,7 +96,7 @@ Highcharts.theme = {
 Highcharts.setOptions(Highcharts.theme);
 
 // Эффективность работы
-Highcharts.chart('graph-effective', {
+Highcharts.chart('channel-subscribers', {
   chart: {
     type: 'line'
   },
@@ -133,7 +133,7 @@ Highcharts.chart('graph-effective', {
 });
 
 // Эффективность работы
-Highcharts.chart('graph-effectivefff', {
+Highcharts.chart('channel-views', {
   chart: {
     type: 'line'
   },
