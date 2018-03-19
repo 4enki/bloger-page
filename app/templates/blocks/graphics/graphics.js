@@ -25,7 +25,8 @@ Highcharts.theme = {
     panning: true,
     panKey: 'shift',
     followPointer: false,
-    marker: false
+    marker: false,
+    type: 'line'
   },
 
   exporting: {
@@ -54,14 +55,18 @@ Highcharts.theme = {
   },
 
   xAxis: {
-    type: 'datetime',
     title: {
       text: ''
     },
     crosshair: {
       width: 1,
       color: '#e1e1e1'
-    }
+    },
+    type: 'datetime',
+    dateTimeLabelFormats: {
+      day: '%e %b'
+    },
+    categories: categories
   },
 
   yAxis: {
@@ -81,7 +86,7 @@ Highcharts.theme = {
 
   tooltip: {
     headerFormat: '',
-    pointFormat: '<span style="color: #fff;font-family:\'Arial\';font-size:18px;font-weight:400;line-height:18px;">{point.y}</span><br>',
+    pointFormat: '<span style="color: #fff;font-family:\'Arial\';font-size:18px;font-weight:400;line-height:18px;">{point.y}</</span><br>',
     backgroundColor: null,
     borderWidth: 0,
     shared: true,
@@ -97,74 +102,14 @@ Highcharts.setOptions(Highcharts.theme);
 
 // Эффективность работы
 Highcharts.chart('channel-subscribers', {
-  chart: {
-    type: 'line'
-  },
-
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: {
-      day: '%e %b'
-    }
-  },
-
   series: [{
-    total: '27 %',
-    data: [
-      [Date.UTC(2017,0,16),1405],
-      [Date.UTC(2017,0,17),1398],
-      [Date.UTC(2017,0,18),1199],
-      [Date.UTC(2017,0,19),1238],
-      [Date.UTC(2017,0,20),1349],
-      [Date.UTC(2017,0,21),1462],
-      [Date.UTC(2017,0,22),1474],
-      [Date.UTC(2017,0,23),1243],
-      [Date.UTC(2017,0,24),1310],
-      [Date.UTC(2017,0,25),1398],
-      [Date.UTC(2017,0,26),1277],
-      [Date.UTC(2017,0,27),1392],
-      [Date.UTC(2017,0,28),1187],
-      [Date.UTC(2017,0,29),1387],
-      [Date.UTC(2017,0,30),1287],
-      [Date.UTC(2017,0,31),1187],
-      [Date.UTC(2017,1,1),1587]
-    ]
+    data: subscribers
   }]
 });
 
 // Эффективность работы
 Highcharts.chart('channel-views', {
-  chart: {
-    type: 'line'
-  },
-
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: {
-      day: '%e %b'
-    }
-  },
-
   series: [{
-    total: '27 %',
-    data: [
-      [Date.UTC(2017,0,16),1405],
-      [Date.UTC(2017,0,17),1398],
-      [Date.UTC(2017,0,18),1199],
-      [Date.UTC(2017,0,19),1238],
-      [Date.UTC(2017,0,20),1349],
-      [Date.UTC(2017,0,21),1462],
-      [Date.UTC(2017,0,22),1474],
-      [Date.UTC(2017,0,23),1243],
-      [Date.UTC(2017,0,24),1310],
-      [Date.UTC(2017,0,25),1398],
-      [Date.UTC(2017,0,26),1277],
-      [Date.UTC(2017,0,27),1392],
-      [Date.UTC(2017,0,28),1187],
-      [Date.UTC(2017,0,29),1387],
-      [Date.UTC(2017,0,30),1287],
-      [Date.UTC(2017,0,31),1187],
-      [Date.UTC(2017,1,1),1587]
-    ]
+    data: views
   }]
 });
