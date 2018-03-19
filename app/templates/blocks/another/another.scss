@@ -52,9 +52,16 @@
     background-color: #262d30;
     padding: 20px;
     border-radius: 3px;
+    border: 1px solid #262d30;
+
 
     &:hover {
-      box-shadow: 0 0 30px -4px #ddd;
+      box-shadow: 0 0 10px -1px #00b000;
+      border-color: #00b000;
+
+      .channel-passport_name {
+        color: #00b000;
+      }
     }
   }
 
