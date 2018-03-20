@@ -60,24 +60,28 @@ Highcharts.theme = {
     },
     crosshair: {
       width: 1,
-      color: '#e1e1e1'
+      color: '#e4e8eb',
     },
-    type: 'datetime',
     dateTimeLabelFormats: {
-      day: '%e %b'
+      day: '%Y'
     },
-    categories: categories
+    lineColor: '#e4e8eb',
+    categories: categories,
+    tickInterval: 7,
+    type: 'datetime'
   },
 
   yAxis: {
-    gridLineColor: '#f7f7f7',
+    gridLineColor: '#e4e8eb',
     title: {
       text: ''
     },
     crosshair: {
       width: 1,
-      color: '#e1e1e1'
-    }
+      color: '#e4e8eb',
+    },
+    gridLineDashStyle: 'Dot',
+    lineColor: '#e4e8eb'
   },
 
   legend: {
