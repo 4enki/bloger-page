@@ -63,12 +63,10 @@ Highcharts.theme = {
       color: '#e4e8eb',
     },
     lineColor: '#e4e8eb',
-    categories: period,
-    tickInterval: 7,
     type: 'datetime',
     dateTimeLabelFormats: {
-      day: '%e of %b'
-    }
+      day: '%e %b'
+    },
   },
 
   yAxis: {
@@ -107,9 +105,11 @@ Highcharts.setOptions(Highcharts.theme);
 
 // Эффективность работы
 Highcharts.chart('channel-subscribers', {
+
   series: [{
     data: subscribers
   }]
+
 });
 
 // Эффективность работы
