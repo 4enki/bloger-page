@@ -62,13 +62,13 @@ Highcharts.theme = {
       width: 1,
       color: '#e4e8eb',
     },
-    dateTimeLabelFormats: {
-      day: '%Y'
-    },
     lineColor: '#e4e8eb',
-    categories: categories,
+    categories: period,
     tickInterval: 7,
-    type: 'datetime'
+    type: 'datetime',
+    dateTimeLabelFormats: {
+      day: '%e of %b'
+    }
   },
 
   yAxis: {
@@ -90,7 +90,7 @@ Highcharts.theme = {
 
   tooltip: {
     headerFormat: '',
-    pointFormat: '<span style="color: #fff;font-family:\'Arial\';font-size:18px;font-weight:400;line-height:18px;">{point.y}</</span><br>',
+    pointFormat: '<span style="color: #fff;font-family:\'Arial\';font-size:18px;font-weight:400;line-height:18px;">{point.y}</span><br>',
     backgroundColor: null,
     borderWidth: 0,
     shared: true,
@@ -98,9 +98,10 @@ Highcharts.theme = {
     useHTML: true,
     style: {
       padding: 0
-    },
+    }
   }
 };
+
 
 Highcharts.setOptions(Highcharts.theme);
 
