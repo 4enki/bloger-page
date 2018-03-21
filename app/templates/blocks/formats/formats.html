@@ -5,102 +5,121 @@
         <h2 class="h2">Рекламные форматы и форматы сотрудничества</h2>
         <p>Вы выбираете подходящий формат и всё будет дальше очень круто. Готовы, котаны?</p>
       </div>
-      <div class="formats_list-edit">
 
-        <div class="format-mini">
-          <div class="format-mini-box">
-            <div class="format-mini_name">
-              <h3 class="h3">Ссылка в описании</h3>
-            </div><!-- /.format-mini_name -->
-            <div class="format-mini_cost">
-              <div class="form-group status-right">
-                <input type="text" class="form-control" value="2 800">
-                <div class="form-control-feedback"><ins class="rub">Р</ins></div>
-              </div>
-            </div><!-- /.format-mini_cost -->
-            <div class="format-mini_control">
-              <div class="form-check">
-                <input type="checkbox" name="offers-agree" id="ideaiamok" value="1">
-                <label for="ideaiamok">
-                  <span class="form-check-control">Показать</span>
-                </label>
-              </div><!-- /.form-check -->
-            </div><!-- /.format-mini_control -->
-          </div><!-- /.format-mini-box -->
-        </div><!-- /.format-mini -->
+      <form class="form-horizontal" method="post">
+        <div class="formats_list-edit control-group article-type site" data-id="<%= $site->id %>" data-allow-price-edit="<%= $site->allow_price_edit %>">
+          <input type="hidden" name="action" value="allow_youtube">
 
-        <div class="format-mini">
-          <div class="format-mini-box">
-            <div class="format-mini_name">
-              <h3 class="h3">Упоминание в ролике</h3>
-            </div><!-- /.format-mini_name -->
-            <div class="format-mini_cost">
-              <div class="form-group status-right">
-                <input type="text" class="form-control" value="2 800">
-                <div class="form-control-feedback"><ins class="rub">Р</ins></div>
-              </div>
-            </div><!-- /.format-mini_cost -->
-            <div class="format-mini_control">
-              <div class="form-check">
-                <input type="checkbox" name="offers-agree" id="ideaiamok" value="1">
-                <label for="ideaiamok">
-                  <span class="form-check-control">Показать</span>
-                </label>
-              </div><!-- /.form-check -->
-            </div><!-- /.format-mini_control -->
-          </div><!-- /.format-mini-box -->
-        </div><!-- /.format-mini -->
+          <div class="format-mini controls">
+            <div class="format-mini-box">
+              <div class="format-mini_name">
+                <h3 class="h3">Ссылка в описании</h3>
+                <span class="preloader" data-preloader-src="/s/i/preloader16.gif"></span>
+              </div><!-- /.format-mini_name -->
+              <div class="format-mini_cost">
+                <div class="form-group">
+                  <div class="cost-control <%= $site->data('allow_youtube_mention') || $site->data('allow_youtube_promo') ? '' : 'hide' %>">
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--down" data-action="dec" data-type="link" data-qtip="" title="Уменьшить"><i class="icon icon-minus"></i></button>
+                    <div class="cost-control__item cost-control__price">
+                      <input type="text" class="cost-control__input cost-text form-control mini" maxlength="5" readonly value="<%= tariff->site_webmaster_price($site,'youtube'), 'int' => 1 %>">
+                      <span class="cost-control__rub"><ins class="rub">Р</ins></span>
+                    </div>
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--up" data-action="inc" data-type="link" data-qtip="" title="Увеличить"><i class="icon icon-plus"></i></button>
+                  </div>
+                </div>
+              </div><!-- /.format-mini_cost -->
+              <div class="format-mini_control">
+                <div class="form-check">
+                  <input type="checkbox" id="link" name="allow_youtube_link" autocomplete="off" <%= $site->data('allow_youtube_link') ? 'checked="checked"' : '' %>>
+                  <label for="link">
+                    <span class="form-check-control">Включить</span>
+                  </label>
+                </div><!-- /.form-check -->
+              </div><!-- /.format-mini_control -->
+            </div><!-- /.format-mini-box -->
+          </div><!-- /.format-mini -->
 
-        <div class="format-mini">
-          <div class="format-mini-box">
-            <div class="format-mini_name">
-              <h3 class="h3">Проморолик</h3>
-            </div><!-- /.format-mini_name -->
-            <div class="format-mini_cost">
-              <div class="form-group status-right">
-                <input type="text" class="form-control" value="2 800">
-                <div class="form-control-feedback"><ins class="rub">Р</ins></div>
-              </div>
-            </div><!-- /.format-mini_cost -->
-            <div class="format-mini_control">
-              <div class="form-check">
-                <input type="checkbox" name="offers-agree" id="ideaiamok" value="1">
-                <label for="ideaiamok">
-                  <span class="form-check-control">Показать</span>
-                </label>
-              </div><!-- /.form-check -->
-              <div class="form-check">
-                <input type="checkbox" name="offers-agree" id="ideaiamok" value="1">
-                <label for="ideaiamok">
-                  <span class="form-check-control">Выделить</span>
-                </label>
-              </div><!-- /.form-check -->
-            </div><!-- /.format-mini_control -->
-          </div><!-- /.format-mini-box -->
-        </div><!-- /.format-mini -->
+          <div class="format-mini controls">
+            <div class="format-mini-box">
+              <div class="format-mini_name">
+                <h3 class="h3">Упоминание в ролике</h3>
+                <span class="preloader" data-preloader-src="/s/i/preloader16.gif"></span>
+              </div><!-- /.format-mini_name -->
+              <div class="format-mini_cost">
+                <div class="form-group">
+                  <div class="cost-control <%= $site->data('allow_youtube_mention') || $site->data('allow_youtube_promo') ? '' : 'hide' %>">
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--down" data-action="dec" data-type="mention" data-qtip="" title="Уменьшить"><i class="icon icon-minus"></i></button>
+                    <div class="cost-control__item cost-control__price">
+                      <input type="text" class="cost-control__input cost-text form-control mini" maxlength="5" readonly value="<%= tariff->site_webmaster_price($site, 'youtube', 'youtube_mention'), 'int' => 1 %>">
+                      <span class="cost-control__rub"><ins class="rub">Р</ins></span>
+                    </div>
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--up" data-action="inc" data-type="mention" data-qtip="" title="Увеличить"><i class="icon icon-plus"></i></button>
+                  </div>
+                </div>
+              </div><!-- /.format-mini_cost -->
+              <div class="format-mini_control">
+                <div class="form-check">
+                  <input type="checkbox" id="mention" name="allow_youtube_mention" autocomplete="off" <%= $site->data('allow_youtube_mention') ? 'checked="checked"' : '' %>>
+                  <label for="mention">
+                    <span class="form-check-control">Включить</span>
+                  </label>
+                </div><!-- /.form-check -->
+              </div><!-- /.format-mini_control -->
+            </div><!-- /.format-mini-box -->
+          </div><!-- /.format-mini -->
 
-        <div class="format-mini">
-          <div class="format-mini-box">
-            <div class="format-mini_name">
-              <h3 class="h3">Свой вариант от рекламодателей</h3>
-            </div><!-- /.format-mini_name -->
-            <div class="format-mini_cost">
-            </div><!-- /.format-mini_cost -->
-            <div class="format-mini_control">
-              <div class="form-check">
-                <input type="checkbox" name="offers-agree" id="ideaiamok" value="1" checked disabled>
-                <label for="ideaiamok">
-                  <span class="form-check-control">Активно всегда</span>
-                </label>
-              </div><!-- /.form-check -->
-            </div><!-- /.format-mini_control -->
-          </div><!-- /.format-mini-box -->
-        </div><!-- /.format-mini -->
+          <div class="format-mini controls">
+            <div class="format-mini-box">
+              <div class="format-mini_name">
+                <h3 class="h3">Проморолик</h3>
+                <span class="preloader" data-preloader-src="/s/i/preloader16.gif"></span>
+              </div><!-- /.format-mini_name -->
+              <div class="format-mini_cost">
+                <div class="form-group">
+                  <div class="cost-control <%= $site->data('allow_youtube_mention') || $site->data('allow_youtube_promo') ? '' : 'hide' %>">
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--down" data-action="dec" data-type="promo" data-qtip="" title="Уменьшить"><i class="icon icon-minus"></i></button>
+                    <div class="cost-control__item cost-control__price">
+                      <input type="text" class="cost-control__input cost-text form-control mini" maxlength="5" readonly value="<%= tariff->site_webmaster_price($site, 'youtube', 'youtube_promo'), 'int' => 1 %>">
+                      <span class="cost-control__rub"><ins class="rub">Р</ins></span>
+                    </div>
+                    <button class="price-edit-button cost-control__item cost-control__btn cost-control__btn--up" data-action="inc" data-type="promo" data-qtip="" title="Увеличить"><i class="icon icon-plus"></i></button>
+                  </div>
+                </div>
+              </div><!-- /.format-mini_cost -->
+              <div class="format-mini_control">
+                <div class="form-check">
+                  <input type="checkbox" id="promo" name="allow_youtube_promo" autocomplete="off" <%= $site->data('allow_youtube_promo') ? 'checked="checked"' : '' %>>
+                  <label for="promo">
+                    <span class="form-check-control">Включить</span>
+                  </label>
+                </div><!-- /.form-check -->
+              </div><!-- /.format-mini_control -->
+            </div><!-- /.format-mini-box -->
+          </div><!-- /.format-mini -->
 
-      </div><!-- /.formats_list-edit -->
-      <div class="formats_list-edit_help">
-        <p>Всю информацию по&nbsp;типам заказов и&nbsp;их&nbsp;стоимости вы&nbsp;также можете редактировать <a href="">в&nbsp;настройках</a> свого канала в&nbsp;кабинете блогера.</p>
-      </div><!-- /.formats_list-edit_help -->
+          <div class="format-mini">
+            <div class="format-mini-box">
+              <div class="format-mini_name">
+                <h3 class="h3">Свой вариант от рекламодателей</h3>
+              </div><!-- /.format-mini_name -->
+              <div class="format-mini_cost">
+              </div><!-- /.format-mini_cost -->
+              <div class="format-mini_control">
+                <div class="form-check">
+                  <input type="checkbox" name="offers-agree" id="ideaiamok" value="1" checked disabled>
+                  <label for="ideaiamok">
+                    <span class="form-check-control">Активно всегда</span>
+                  </label>
+                </div><!-- /.form-check -->
+              </div><!-- /.format-mini_control -->
+            </div><!-- /.format-mini-box -->
+          </div><!-- /.format-mini -->
+
+        </div><!-- /.formats_list-edit -->
+        <div class="formats_list-edit_help">
+          <p>Всю информацию по&nbsp;типам заказов и&nbsp;их&nbsp;стоимости вы&nbsp;также можете редактировать <a href="<%= url_for 'site-settings', 'site_id' => $site->id %>">в&nbsp;настройках</a> свого канала в&nbsp;кабинете блогера.</p>
+        </div><!-- /.formats_list-edit_help -->
+      </form>
       <div class="formats_list">
         <div class="format disabled">
           <div class="format-box emerge" data-effect="slide">

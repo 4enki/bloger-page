@@ -32,4 +32,15 @@
     background-image: svg-load('add.svg', fill=#c1c7cb);
     top: 5px;
   }
+
+  &-plus {
+    @include size(14px);
+    background-image: svg-load('plus.svg');
+  }
+
+  &-minus {
+    @include size(14px, 2px);
+    background-image: svg-load('minus.svg');
+    top: -4px;
+  }
 }

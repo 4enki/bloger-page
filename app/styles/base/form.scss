@@ -96,8 +96,7 @@ input:placeholder {
   vertical-align: middle;
   //transition: border-color ease-in-out .15s;
 
-  &:disabled,
-  &[readonly] {
+  &:disabled {
     color: rgb(46, 49, 51);
     background-color: rgb(242, 246, 247);
     border-color: rgb(214, 218, 221);
@@ -111,6 +110,12 @@ input:placeholder {
   &:focus,
   &.focus {
     border-color: rgb(30, 155, 0);
+  }
+
+  &.cost-control__input {
+    width: 90px !important;
+    padding: 4px 25px 4px 10px;
+    height: 30px;
   }
 }
 
