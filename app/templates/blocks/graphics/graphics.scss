@@ -25,8 +25,7 @@
   &--error {
     background-size: 19px 19px;
     background-position: -1px -1px;
-    background-image: linear-gradient(to right, #f1f6f7 1px, transparent 1px),
-                      linear-gradient(to bottom, #f1f6f7 1px, transparent 1px);
+    background-image: linear-gradient(to right, #f1f6f7 1px, transparent 1px), linear-gradient(to bottom, #f1f6f7 1px, transparent 1px);
     display: flex;
     align-items: center;
     align-content: center;
