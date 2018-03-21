@@ -1,0 +1,75 @@
+.cost-control {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0;
+}
+.cost-control__item {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+.cost-control__price {
+  position: relative;
+}
+.cost-control__price.blur {
+  box-shadow: 0 0 3px #5cb85c;
+}
+.cost-control__price.progress {
+  background-color: #5cb85c;
+  background-color: rgba(92, 184, 92, .50);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  -webkit-animation: btn-progress-stripes 2s linear infinite;
+  animation: btn-progress-stripes 2s linear infinite;
+}
+.cost-control__input {
+  display: block;
+  width: 50px !important;
+  box-shadow: none;
+  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, .1);
+  transition: 0.3s ease;
+  padding: 4px 25px 4px 9px;
+  background-color: transparent;
+  text-align: right;
+}
+.cost-control__input:hover,
+.cost-control__input:focus {
+  border-color: rgb(48, 175, 11);
+}
+.cost-control__rub {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  color: rgb(147, 163, 167);
+}
+.cost-control__btn {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+  border: 1px solid rgb(218, 229, 232);
+  background-color: #fff;
+  transition: 0.3s ease;
+  color: #8DA4A9;
+  text-align: center;
+}
+.cost-control__btn--down {
+  margin-left: 3px;
+}
+.cost-control__btn--down .fa-minus {
+  margin-top: 3px;
+}
+.cost-control__btn--down:hover {
+  background-color: #FF0404;
+  border: 1px solid #FF0404;
+  color: #fff;
+}
+.cost-control__btn--up {
+  margin-right: 3px;
+}
+.cost-control__btn--up:hover {
+  background-color: rgb(48, 175, 11);
+  border: 1px solid rgb(48, 175, 11);
+  color: #fff;
+}
