@@ -372,17 +372,17 @@
   .graphics {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .audience {
-    width: 400px;
+    width: 320px;
 
     .audience_tree_age,
     .audience_header_devider {
-      flex-basis: 90px;
-      min-width: 90px;
+      flex-basis: 70px;
+      min-width: 70px;
     }
 
     .audience_tree {
@@ -390,7 +390,25 @@
     }
 
     .audience_item {
-      width: 500px;
+      width: 400px;
+    }
+
+    .audience_percent {
+      flex-basis: 49px;
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    .audience_header .h3 {
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    .audience_header {
+
+      .audience_percent {
+        flex-basis: 44px;
+      }
     }
   }
 

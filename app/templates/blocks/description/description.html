@@ -7,7 +7,7 @@
         <div class="description_text">
           <p>Я хач Родился и увы вырос Мне 30 лет Пишу книги Люблю шаурму Веду свой канал на ютубе С недавних пор начал вести свой твич По вопросам рекламы и сотрудничества пишите на почту</p>
           <p>Сострадать — это чудесно. Это то, что чувствуешь, глядя на раздавленную гусеницу. Возвышающее чувство. Можно размягчиться и раздаться вширь... понимаете, все равно что снять с себя корсет... Сострадание — великая добродетель. Оно оправдывает страдание. В этом мире надо страдать, ибо как иначе стать добродетельным и испытать сострадание?.. О, оно имеет свою противоположность, но такую суровую и требовательную... Восхищение.</p>
-          <form action="<%= url_for 'site-description_edit', id => $site->id %>" method="post" autocomplete="off" id="edit-description">
+          <form action="<%= url_for 'site-description_edit', id => $site->id %>" method="post" autocomplete="off" id="edit-description" style="display: none;visibility: hidden;">
             <div class="form-group">
               <textarea name="description" class="form-control" cols="30" rows="8" placeholder="Описание канала «<%= $site->title %>»"><%= $site->description || $channel->{desc} %></textarea>
             </div><!-- /.form-group -->

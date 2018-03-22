@@ -29,6 +29,10 @@ Highcharts.theme = {
     type: 'line'
   },
 
+  global: {
+    useUTC: false
+  },
+
   exporting: {
     enabled: false
   },
@@ -63,10 +67,16 @@ Highcharts.theme = {
       color: '#e4e8eb',
     },
     lineColor: '#e4e8eb',
+    tickInterval: 7,
     type: 'datetime',
-    dateTimeLabelFormats: {
-      day: '%e %b'
-    },
+    labels: {
+      formatter: function () {
+        var point = this.value.match(/\d+/g);
+        var date = new Date(point[2], point[0]-1, point[1]);
+        console.log(date);
+        return date;
+      }
+    }
   },
 
   yAxis: {
@@ -105,11 +115,11 @@ Highcharts.setOptions(Highcharts.theme);
 
 // Эффективность работы
 Highcharts.chart('channel-subscribers', {
-
   series: [{
-    data: subscribers
+    data: subscribers,
+    pointStart: Date.UTC(2017, 4, 1),
+    pointInterval: 24 * 3600 * 1000
   }]
-
 });
 
 // Эффективность работы
