@@ -1,4 +1,12 @@
 @media #{$sm} {
+  .formats_list-edit,
+  .edit-video-list,
+  .formats_list-edit_help,
+  .header-nav__section {
+    display: none;
+    visibility: hidden;
+  }
+
   // шапка
   .header {
 
@@ -29,10 +37,17 @@
       height: auto;
 
       .header_wrapper {
-        padding: 50px 5px 5px 5px;
+        padding: 10px 5px 5px 5px;
         height: auto;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: flex-start;
+        position: relative;
+      }
+
+      .header-menu {
+        margin-left: 0;
+        width: 100%;
+        padding-right: 10px;
       }
 
       .logo {
@@ -41,10 +56,17 @@
         top: 14px;
       }
 
-      .header_nav--hamburger {
+      .header_aside {
         position: absolute;
         top: 0;
         right: 0;
+      }
+
+      .header_nav_item.active {
+
+        .header_nav-link span {
+          color: #fa0;
+        }
       }
 
       .header_nav {
@@ -59,10 +81,14 @@
       }
 
       .header_nav-link {
-        padding: 10px 0;
+        padding: 5px 0;
         display: block;
         width: 100%;
         height: auto;
+      }
+
+      .header_nav-link span:after {
+        height: 1px;
       }
 
       .search-form--open .search-form_wrapper {
@@ -153,16 +179,29 @@
     }
 
     .channel-counters {
-      padding-top: 10px;
       align-items: flex-start;
       align-content: flex-start;
+      flex-wrap: wrap;
+      padding: 0;
+
+      &_header {
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-basis: 100%;
+        transform: rotate(0deg);
+        width: 100%;
+        height: auto;
+        padding: 15px 15px 15px 15px;
+        margin-bottom: 15px;
+      }
     }
 
     .channel-counter {
       background-color: #fff;
       border-radius: 3px;
       padding: 10px;
-      flex-basis: 40%;
+      flex-basis: 50%;
       margin-bottom: 20px;
       margin-right: 5px;
 
@@ -183,6 +222,7 @@
   }
 
   // форматы и стоимость
+
   .formats {
     padding-left: 15px;
     padding-right: 15px;
@@ -201,11 +241,15 @@
       p:last-child {
         margin-bottom: 0;
       }
+
+      p {
+        width: 100%;
+      }
     }
 
     &_list {
       padding-top: 5px;
-      padding-bottom: 10px;
+      padding-bottom: 0;
       width: 100%;
       flex-wrap: wrap;
       flex-direction: column;
@@ -215,6 +259,12 @@
       flex-basis: 100%;
       margin-right: 0;
       margin-bottom: 15px;
+
+      &.format--big {
+        transform: scale(1.03);
+      }
+
+      &:last-child { margin-bottom: 0; }
     }
   }
 
@@ -232,7 +282,7 @@
     }
 
     &-periods {
-      display: block;
+      display: none;
       visibility: hidden;
     }
 
@@ -244,6 +294,10 @@
     .mini-video {
       margin-bottom: 20px;
       margin-right: 0;
+    }
+
+    .videos-types {
+      padding-top: 5px;
     }
   }
 
@@ -312,6 +366,51 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .graphics {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .audience {
+    width: 400px;
+
+    .audience_tree_age,
+    .audience_header_devider {
+      flex-basis: 90px;
+      min-width: 90px;
+    }
+
+    .audience_tree {
+      margin-bottom: 15px;
+    }
+
+    .audience_item {
+      width: 500px;
+    }
+  }
+
+  .another {
+    padding: 15px;
+
+    .channel-info_text {
+      margin-right: 15px;
+    }
+
+    .another_list {
+      flex-wrap: wrap;
+    }
+
+    .another_item {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+
+      &:last-child { margin-bottom: 0; }
     }
   }
 }
