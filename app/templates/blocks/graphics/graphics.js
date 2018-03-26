@@ -68,15 +68,7 @@ Highcharts.theme = {
     },
     lineColor: '#e4e8eb',
     tickInterval: 7,
-    type: 'datetime',
-    labels: {
-      formatter: function () {
-        var point = this.value.match(/\d+/g);
-        var date = new Date(point[2], point[0]-1, point[1]);
-        console.log(date);
-        return date;
-      }
-    }
+    type: 'datetime'
   },
 
   yAxis: {
