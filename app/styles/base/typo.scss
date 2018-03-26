@@ -29,6 +29,18 @@ a {
   //}
 }
 
+.pseudolink {
+  border-bottom: 1px dashed;
+  color: #008ACE;
+
+  &:hover,
+  &.hover {
+    color: #00b002;
+    transition: .2s ease;
+    cursor: pointer;
+  }
+}
+
 // адаптивный видео-блок
 .video-container {
   position: relative;

@@ -1,4 +1,4 @@
-.channel-lead {
+.channel-cover {
   height: 280px;
   width: 100%;
   background-color: rgba(38, 45, 48, .55);
@@ -93,4 +93,22 @@
       margin-bottom: 10px;
     }
   }
+
+  &-more {
+    padding-top: 5px;
+    margin-top: 10px;
+    border-top: 1px solid #f1f6f7;
+    text-align: center;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+._longtext {
+
+  &._less { .SecSec, .readLess { display: none; } }
+
+  &._show { .readMore { display: none; } }
+
+  &._show { .SecSec, .readLess { display: inline; } }
 }

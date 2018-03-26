@@ -1,10 +1,8 @@
-<div class="channel-lead" style="background-image: url(https\:\/\/yt3\.ggpht\.com\/-eAgOqmepiZDoUgmB4PVZWON7xhm_eQziA9fF1aO60p350HC2CwjWgwUweUL4a7jr8ocXemBxQ\=w2560-fcrop64\=1\,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no);" data-spin="true" data-spin-color="#eee">
-  <div class="channel-lead_bg emerge">
-    <div class="container">
-
-    </div><!-- /.container -->
-  </div><!-- /.channel-lead_bg -->
-</div><!-- /.channel-lead -->
+<div class="channel-cover" style="background-image: url(https\:\/\/yt3\.ggpht\.com\/-eAgOqmepiZDoUgmB4PVZWON7xhm_eQziA9fF1aO60p350HC2CwjWgwUweUL4a7jr8ocXemBxQ\=w2560-fcrop64\=1\,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no);" data-spin="true" data-spin-color="#eee">
+  <div class="channel-cover_bg emerge">
+    <div class="container"></div><!-- /.container -->
+  </div><!-- /.channel-cover_bg -->
+</div><!-- /.channel-cover -->
 
 <div class="description_wrap" id="description">
   <div class="container">
@@ -13,8 +11,11 @@
       <div class="description_content">
         <div class="description_header"><h2 class="h2">Описание канала</h2></div><!-- /.description_header -->
         <div class="description_text">
-          <p>Я хач Родился и увы вырос Мне 30 лет Пишу книги Люблю шаурму Веду свой канал на ютубе С недавних пор начал вести свой твич По вопросам рекламы и сотрудничества пишите на почту</p>
-          <p>Сострадать — это чудесно. Это то, что чувствуешь, глядя на раздавленную гусеницу. Возвышающее чувство. Можно размягчиться и раздаться вширь... понимаете, все равно что снять с себя корсет... Сострадание — великая добродетель. Оно оправдывает страдание. В этом мире надо страдать, ибо как иначе стать добродетельным и испытать сострадание?.. О, оно имеет свою противоположность, но такую суровую и требовательную... Восхищение.</p>
+          <div class="description_text-long _longtext _less">
+          <p>Я хач Родился и увы вырос Мне 30 лет Пишу книги Люблю шаурму Веду свой канал на ютубе С недавних пор начал вести свой твич По вопросам рекламы и сотрудничества пишите на почту <br> Сострадать — это чудесно. Это то, что чувствуешь, глядя на раздавленную гусеницу. Возвышающее чувство. Можно размягчиться и раздаться вширь... понимаете, все равно что снять с себя корсет... Сострадание — великая добродетель. Оно оправдывает страдание. В этом мире надо страдать, ибо как иначе стать добродетельным и испытать сострадание?.. О, оно имеет свою противоположность, но такую суровую и требовательную... Восхищение. Всем привет. Меня зовут Ксения. Мне 33 года. <br>На моем канале собран целый каталог масок и советов по уходу за собой дома.<br>Каталог поможет вам решить множество проблем, таких как нежелательные волосы на теле, избыточное потоотделение, избавление от морщин и пигментации, выпадение волос, желтизна зубной эмали и многое другое. <br>Не все рецепты из интернета являются эффективными, потому я их проверяю, чтобы знать, какие рецепты действительно могут избавить вас от проблем, а какие-наоборот навредить.<br>Кроме домашних рецептов я проверяю салонные процедуры. Например, уколы красоты. Многие девушки боятся их, но посмотрев серию видео можно точно определить, нужно вам это или нет. Так же я веду пластический дневник по увеличению груди. Показываю весь процесс от и до, в мельчайших подробностях. Если вам  интересна тема пластики, добро пожаловать за ответами. <br>Всегда рада Новым знакомствам. Жду всех в гости???? <br>Будем красивые вместе!</p>
+          </div><!-- /.description_text-long -->
+          <div class="description-more"><span class="pseudolink">Развернуть описание</span></div>
+
           <form action="<%= url_for 'site-description_edit', id => $site->id %>" method="post" autocomplete="off" id="edit-description" style="display: none;visibility: hidden;">
             <div class="form-group">
               <textarea name="description" class="form-control" cols="30" rows="8" placeholder="Описание канала «<%= $site->title %>»"><%= $site->description || $channel->{desc} %></textarea>
@@ -25,6 +26,7 @@
               <div class="form-actions-info error">Текст ошибки</div><!-- .form-actions-info -->
             </div><!-- /.form-actions -->
           </form>
+
         </div><!-- /.description_text -->
       </div>
     </div>
