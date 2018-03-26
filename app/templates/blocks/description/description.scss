@@ -1,15 +1,14 @@
 .channel-lead {
-  height: 220px;
+  height: 280px;
   width: 100%;
   background-color: rgba(38, 45, 48, .55);
   background-attachment: scroll;
-  background-position: 50% 50%;
+  background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
   &_bg {
-    background-color: rgba(38, 45, 48, .75);
     position: absolute;
     transition: all .2s ease;
     z-index: 3;
