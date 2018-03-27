@@ -130,6 +130,11 @@
     padding-right: 15px;
   }
 
+  .channel-cover {
+    height: 120px;
+    background-position: 50% 50%;
+  }
+
   // описание канала
   .description {
 
@@ -287,13 +292,21 @@
     }
 
     .videos-list {
-      flex-direction: column;
       padding-top: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
     }
 
     .mini-video {
       margin-bottom: 20px;
+      flex-basis: 100%;
       margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .videos-types {
