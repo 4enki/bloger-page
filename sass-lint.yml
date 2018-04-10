@@ -8,6 +8,7 @@ files:
     - app/styles/helpers/flexboxgrid.scss
     - app/styles/base/fonts.scss
     - app/templates/blocks/formats/old-cost.scss
+    - app/templates/blocks/header/hedaer.scss
 
 options:
   merge-default-rules: false
